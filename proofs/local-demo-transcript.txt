@@ -1,0 +1,11 @@
+[09:04:40] buyer agent  0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+[09:04:40] seller agent 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+[09:04:40] registry 0x8464135c8F25Da09e49BC8782676a84730C318bC | token 0x5FbDB2315678afecb367f032d93F642f64180aa3
+[09:04:40] buyer -> POST http://127.0.0.1:44241/tasks/chain-snapshot
+[09:04:40] 402 received: 10000 base units of 0x5FbDB2315678afecb367f032d93F642f64180aa3 to 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 (quote 0x47f3858ca59b102637fceaffd10cc7a4)
+[09:04:40] SpendGuard: allowed
+[09:04:40] HSP mandate registered: paymentId 0x8fa05cf4ce8ce041383a11d41c6aa972ef70bd52d4444b1044f5d48f093a0794
+[09:04:40] USDC transfer confirmed: 0xe7335552b431d6ca8ec70972d49f10bc4af877b4c9930fba9986ac392824b13f
+[09:04:41] seller -> 200 {"skill":"chain-snapshot","chainId":31337,"blockNumber":5,"blockTime":1793264680,"gasPriceGwei":"1.519151406"}
+[09:04:41] receipt anchored on-chain: 0xd7cbf6ea0f61e324c51de07240ea7e150e1ed39c048d0460e5257dead0ee545c
+[09:04:41] registry.receiptCount = 1

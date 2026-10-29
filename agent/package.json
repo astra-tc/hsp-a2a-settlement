@@ -1,0 +1,16 @@
+{
+  "name": "astra-hsp-a2a-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Agent-to-agent payments over HTTP 402 settled with HashKey Settlement Protocol (HSP) on HashKey Chain",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --import tsx --test --test-timeout=60000 test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "demo:local": "tsx scripts/demo-local.ts",
+    "demo:hashkey": "tsx scripts/demo-hashkey.ts"
+  },
+  "dependencies": { "ethers": "^6.13.4" },
+  "devDependencies": { "tsx": "^4.19.2", "typescript": "^5.6.3", "@types/node": "^22.9.0" }
+}
