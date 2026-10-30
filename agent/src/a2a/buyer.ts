@@ -39,7 +39,7 @@ export async function callPaidAgent(url: string, body: unknown, d: BuyerDeps) {
   const tx = await usdc.transfer(req.payTo, amount);
   await tx.wait(d.confirmations ?? 1);
   d.guard.record(amount);
-  log(`USDC transfer confirmed: ${tx.hash}`);
+  log(`token transfer confirmed: ${tx.hash}`);
 
   const proof: PaymentProof = { quoteId: req.quoteId, paymentId, txHash: tx.hash, mandate };
   const paid = await post({ [PAYMENT_HEADER]: enc(proof) });

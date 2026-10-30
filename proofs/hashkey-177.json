@@ -1,0 +1,48 @@
+{
+  "chainId": 177,
+  "buyer": "0x1026789fbC7E4f6d318066d95b770aAef8d3efBb",
+  "seller": "0x481AB6f60b02044C665d78609d551F17fce13090",
+  "usdc": "0xB210D2120d57b758EE163cFfb43e73728c471Cf1",
+  "settlementToken": "WHSK (wrapped native HSK; no stablecoin route had liquidity)",
+  "startedAt": "2026-10-30T19:19:22.159Z",
+  "registry": "0xF33e3244f9acFd0c7235c484DdF901699615051a",
+  "registryDeployTx": "0x467362e7405443f57205b9be3834bd324e796ed0f67fc0da73480859907ce801",
+  "registerAgentTx": "0x0da5a097c338ad565153bb164d26905888442b27b306276b362c4d3b06985360",
+  "coordinator": "local-verifier (HSP Coordinator API key not available; on-chain parts are real, coordinator checks run locally)",
+  "paymentId": "0x75cd608d58335a53323fee9348f7061055463990647ae756abfcbbbef67f3056",
+  "usdcTransferTx": "0x6b06b6d4f8a982a21783c762f9c8cbe202158a22a77cca8c03e6c2527b7b6175",
+  "response": {
+    "result": {
+      "skill": "chain-snapshot",
+      "chainId": 177,
+      "blockNumber": 29520422,
+      "blockTime": 1793387979,
+      "gasPriceGwei": "500.001"
+    },
+    "serviceHash": "0xdb3228636bb7172af1233337b3aaafad9f0afc27fdcb6bb90213991b77a7032f",
+    "receipt": {
+      "paymentId": "0x75cd608d58335a53323fee9348f7061055463990647ae756abfcbbbef67f3056",
+      "status": "settled",
+      "txHash": "0x6b06b6d4f8a982a21783c762f9c8cbe202158a22a77cca8c03e6c2527b7b6175",
+      "payer": "0x1026789fbC7E4f6d318066d95b770aAef8d3efBb",
+      "payee": "0x481AB6f60b02044C665d78609d551F17fce13090",
+      "token": "0xB210D2120d57b758EE163cFfb43e73728c471Cf1",
+      "amount": "10000000000000000",
+      "blockNumber": 29520416,
+      "source": "local-verifier"
+    },
+    "anchorTx": "0x504e6fd8d90d75aa93df2cb1baa5656387bd34702f57991c58af183f6f2a6baa"
+  },
+  "finishedAt": "2026-10-30T19:19:41.466Z",
+  "notes": {
+    "settlementToken": "WHSK (0xB210...1Cf1, official wrapped HSK). The demo wallets could not get USDC.e/USDT on HashKey within budget (Meson USDT pool on HashKey was empty, no other API route). The code is token-agnostic; set USDC_ADDRESS=0x054ed45810DbBAb8B27668922D110669c9D88D0a for USDC.e.",
+    "coordinator": "HSP Coordinator API key not available to the team at run time, so the Coordinator step (register mandate + observe transfer) ran in LocalCoordinator, which performs the same checks (EIP-712 signature, chain, deadline, matching Transfer log, confirmations) against the HashKey mainnet RPC. paymentId is the EIP-712 struct hash of the mandate. Registry deploy, agent registration, token transfer and recordSettlement anchor are real HashKey mainnet transactions.",
+    "firstRegisterAttemptReverted": "0xde489baa0469bb82919eebeb0b37e55f508129da261450ad292a03665ea25e9c (gas estimated before the RPC saw the new contract code; fixed in demo-hashkey.ts by waiting for code)",
+    "gasFunding": {
+      "l1HskDepositTx (Ethereum, OptimismPortal.depositERC20Transaction)": "0x38a6316cd9621af50d5d6f85de36aa37c6546898854dcec39a55e936d4d4bd5a",
+      "sellerToBuyerHskTx": "0x7b0f9e86d66a7b59e0b7d503201bbf4dc396a3aaf11ac330a006c47d380b3ff0",
+      "buyerWrapHskTx": "0xa1578efd8fe3ae0eec234de88a16757d878669d61267d131bb2f991419994973"
+    },
+    "explorer": "https://explorer.hsk.xyz"
+  }
+}
